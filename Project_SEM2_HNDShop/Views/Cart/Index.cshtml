@@ -1,6 +1,27 @@
 @model IEnumerable<Project_SEM2_HNDShop.DTO.CartViewDto>
 
+<div class="container">
+    <div class="table-responsive">
+  <table class="table">
+   <tr class="table-active">
+       <th>Action</th>
+       <th>ID</th>
+       <th>ProName</th>
+       <th>OriginPrice</th>
+       <th>SellPrice</th>
+       <th>Quantity</th>
+   </tr>
 @foreach (var item in Model)
 {
-    <h1>@item.product.ProName</h1>
+    <tr>
+        <td><a asp-action="DeleteCartItem" asp-route-id="@item.Id">Delete</a></td>
+        <td>@item.Id</td>
+        <td>@item.product.ProName</td>
+        <td>@item.product.OriginPrice</td>
+        <td>@item.product.SellPrice</td>
+        <td>@item.Quantity</td>
+    </tr>
 }
+  </table>
+</div>
+</div>

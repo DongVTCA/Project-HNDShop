@@ -37,10 +37,150 @@
                                 </div>
                             </a>
                         </div>
+                        <a href="/Cart/AddToCart/@item.product.Id/1">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Add To Cart</button>
+                        </a>
                     </div>
+
                 </div>
 
             </div>
         }
     </div>
 </div>
+
+<!--check cartid-->
+@if (ViewBag.sessionCart != null)
+{
+    <script>
+        $(document).ready(function () {
+            $("#Mymodal").modal("show");
+        });
+        $('#Mymodal').modal({ backdrop: 'static', keyboard: false });
+    </script>
+}
+else
+{
+    <script>
+        $(document).ready(function () {
+            $("#Mymodal").modal("hide");
+        });
+        $('#Mymodal').modal({ backdrop: 'static', keyboard: false });
+    </script>
+}
+<!-- modal -->
+<div class="modal fade" id="Mymodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">SUCCESFULLY ADD TO CART!</h5>
+                <a asp-action="RemoveSessionCart" asp-controller="Home">
+                    <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </a>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 image0">
+                                <img class="product-image___xUBxL"
+                                     src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4a6d0ffb60c64c63add8aa8b00b98598_9366/EH0779_650_01_standard.jpg"
+                                     alt="">
+                            </div>
+                            <div class="col-md-6 col-sm-12 image0">
+                                <h5>Name Shoes</h5>
+                                <p><span>130$</span></p>
+                                <p>
+                                    <span></span>
+                                    <br>
+                                    <span></span>
+                                    <br>
+                                    <span></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 summary___2PcSy">
+                        <h5>Your Cart</h5>
+                        <div class="gl-body--s gl-no-margin-bottom">2 items</div>
+                        <div class="price-row___3Kw5S">
+                            <div data-auto-id="add-to-bag-order-summary-product-total-cost">
+                                Total Product Cost:
+                            </div>
+                            <div class="gl-price" data-auto-id="add-to-bag-order-summary-product-total-cost-value">
+                                <span class="gl-price__value">$260.00</span>
+                            </div>
+                        </div>
+                        <div class="price-row___3Kw5S">
+                            <div data-auto-id="add-to-bag-order-summary-shipping-cost">Total Delivery Cost:</div>
+                            <div class="gl-price" data-auto-id="add-to-bag-order-summary-shipping-cost-value">
+                                <span class="gl-price__value">FREE</span>
+                            </div>
+                        </div>
+                        <div class="gl-divider clear-vspacing___2TND_ summary-divider___v5ZMF"></div>
+                        <div class="price-rows___1DUOj">
+                            <div class="price-row___3Kw5S">
+                                <div data-auto-id="add-to-bag-total"><strong>Total:</strong></div><strong>
+                                    <div class="gl-price" data-auto-id="add-to-bag-total-value">
+                                        <span class="gl-price__value">$260.00</span>
+                                    </div>
+                                </strong>
+                            </div>
+                            <div class="price-tax"></div>
+
+                        </div>
+                        <a asp-action="Index" asp-controller="Cart">
+                            <button type="button" class="gl-cta gl-cta--primary gl-cta--primary-width100"
+                                    aria-label="Primary">
+                                <span class="gl-cta__text">View Bag</span>
+
+                                <svg class="gl-icon gl-cta__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                     width="30" height="20" viewBox="0 0 172 172">
+                                    <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                       stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                       stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                       text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g>
+                                            <path fill="#ffffff" id="arrow"
+                                                  d="M127.48156,44.65281c-2.795,-0.1075 -5.38844,1.49156 -6.53063,4.04469c-1.15562,2.55313 -0.65844,5.53625 1.27656,7.57875l21.13719,22.84375h-133.04469c-2.48594,-0.04031 -4.78375,1.26313 -6.03344,3.41313c-1.26313,2.13656 -1.26313,4.79719 0,6.93375c1.24969,2.15 3.5475,3.45344 6.03344,3.41312h133.04469l-21.13719,22.84375c-1.72,1.80063 -2.32469,4.38063 -1.59906,6.75906c0.72563,2.37844 2.67406,4.17906 5.09281,4.71656c2.43219,0.5375 4.95844,-0.28219 6.61125,-2.12313l36.13344,-39.07625l-36.13344,-39.07625c-1.23625,-1.37062 -2.99656,-2.20375 -4.85094,-2.27094z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                        </a>
+                        <a asp-action="Buy" asp-controller="Order"></a>
+                        <button type="button" class="gl-cta1 gl-cta--primary1 gl-cta--primary-width100"
+                                aria-label="Primary">
+                            <span class="gl-cta__text1">Check Out</span>
+
+                            <svg class="gl-icon gl-cta__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                 width="30" height="20" viewBox="0 0 172 172">
+                                <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                   stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                   stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                   text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g>
+                                        <path fill="#000000" id="arrow1"
+                                              d="M127.48156,44.65281c-2.795,-0.1075 -5.38844,1.49156 -6.53063,4.04469c-1.15562,2.55313 -0.65844,5.53625 1.27656,7.57875l21.13719,22.84375h-133.04469c-2.48594,-0.04031 -4.78375,1.26313 -6.03344,3.41313c-1.26313,2.13656 -1.26313,4.79719 0,6.93375c1.24969,2.15 3.5475,3.45344 6.03344,3.41312h133.04469l-21.13719,22.84375c-1.72,1.80063 -2.32469,4.38063 -1.59906,6.75906c0.72563,2.37844 2.67406,4.17906 5.09281,4.71656c2.43219,0.5375 4.95844,-0.28219 6.61125,-2.12313l36.13344,-39.07625l-36.13344,-39.07625c-1.23625,-1.37062 -2.99656,-2.20375 -4.85094,-2.27094z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

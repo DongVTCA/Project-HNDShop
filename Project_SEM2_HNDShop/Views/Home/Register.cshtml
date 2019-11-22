@@ -1,47 +1,174 @@
 ﻿@model Project_SEM2_HNDShop.Models.User
-<form asp-controller="Home" asp-action="Register" method="post">
+<form method="post" >
+    <div>
+    <div class="account_registration___3cWCX">
+        <div class="col-s-12 col-l-9 offset-l-2">
+            <h2>Register</h2>
+            <form method="post">
+                <h5>Information Details</h5>
+                <div class="field___31Wur gl-vspace "><input asp-for="FirstName" required="" type="text"
+                        placeholder="Name ">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
 
-    <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" asp-for="Email" class="form-control" placeholder="Enter email">
-        <span asp-validation-for="Email" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" asp-for="UserPassword" class="form-control" placeholder="Password">
-        <span asp-validation-for="UserPassword" class="text-danger"></span>
+                </div>
+                <div class="field___31Wur gl-vspace "><input asp-for="LastName" required="" type="text"
+                        placeholder="Last Name ">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+
+                </div>
+                <div class="field___31Wur gl-vspace "><input asp-for="Phone" required="" type="text"
+                        placeholder="Phone Number">
+                    <span id="catching" asp-validation-for="Phone" class="text-danger"></span>
+
+                </div>
+                <div class="field___31Wur gl-vspace "><input asp-for="Address" required="" type="text"
+                        placeholder="Address">
+                    <span asp-validation-for="Address" class="text-danger"></span>
+
+                </div>
+                <div class="ie-flex___3Sy7k">
+                    <div class="gl-form__element gl-form__element--checkbox">
+                        <div class="gl-form-item gl-form-item--required">
+                            <div class="gl-checkbox gl-checkbox--checked">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="defaultChecked2" checked>
+                                    <label class="custom-control-label" for="defaultChecked2">Yes, I
+                                        am over 13 years old</label>
+                                </div>
+
+                                <!-- xx -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="gl-vspace-bpall-small">Login details</h5>
+                <div class="field___31Wur gl-vspace "><input asp-for="Email" required="" type="email"
+                        placeholder="User Name">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                </div>
+                <div class="field___31Wur gl-vspace "><input asp-for="UserPassword" required="" type="password"
+                        placeholder="Password">
+                    <span asp-validation-for="UserPassword" class="text-danger"></span>
+
+                </div>
+                <div class="ie-flex___3Sy7k">
+                    <div class="gl-form__element gl-form__element--checkbox">
+                        <div class="gl-form-item gl-form-item--required">
+                            <div class="gl-checkbox">
+                                By clicking 'Register you agree to the
+                                </span><span><a class="gl-link"
+                                        href="https://www.adidas.com/us/what-are-the-creators-club-terms-and-conditions.html"
+                                        data-auto-id="creators-club-terms-and-conditions-link" target="_blank">Creators
+                                        Club Terms &amp;
+                                        Conditions</a></span><span>, adidas
+                                </span><span><a class="gl-link"
+                                        href="https://www.adidas.com/us/help-topics-terms_and_conditions.html"
+                                        data-auto-id="terms-and-conditions-link" target="_blank">Terms &amp;
+                                        Conditions</a></span><span> and the adidas
+                                </span><span><a class="gl-link"
+                                        href="https://www.adidas.com/us/help-topics-privacy_policy.html"
+                                        data-auto-id="privacy-policy-link" target="_blank">Privacy
+                                        Policy</a></span><span></span></span></span><span
+                                    class="gl-form-asterisk"></span></span></label></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <button type="submit" class="gl-cta gl-cta--primary gl-cta--primary-width100"
+                                aria-label="Primary">
+                                <span class="gl-cta__text">Register</span>
+
+                                <svg class="gl-icon gl-cta__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    width="30" height="20" viewBox="0 0 172 172">
+                                    <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                        stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                        text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g>
+                                            <path fill="#ffffff" id="arrow"
+                                                d="M127.48156,44.65281c-2.795,-0.1075 -5.38844,1.49156 -6.53063,4.04469c-1.15562,2.55313 -0.65844,5.53625 1.27656,7.57875l21.13719,22.84375h-133.04469c-2.48594,-0.04031 -4.78375,1.26313 -6.03344,3.41313c-1.26313,2.13656 -1.26313,4.79719 0,6.93375c1.24969,2.15 3.5475,3.45344 6.03344,3.41312h133.04469l-21.13719,22.84375c-1.72,1.80063 -2.32469,4.38063 -1.59906,6.75906c0.72563,2.37844 2.67406,4.17906 5.09281,4.71656c2.43219,0.5375 4.95844,-0.28219 6.61125,-2.12313l36.13344,-39.07625l-36.13344,-39.07625c-1.23625,-1.37062 -2.99656,-2.20375 -4.85094,-2.27094z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+            </form>
+        </div>
+        <div class="col-s-12 col-l-9 offset-l-2">
+            <div class="gl-hidden-l gl-divider"></div>
+            <h3>Register and join the adidas creators club</h3>
+            <div>
+                <p>Create an account with adidas:</p>
+                <ul class="ulregister">
+                    <li class="gl-vspace bullet_container___1Rxe1">
+                        <svg class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Earn easy points for exclusive rewards</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Access the best special offers and promotions</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Receive invites to exclusive events</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Get access to limited edition products</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Level up for a Runtastic Premium subscription</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Faster checkout with your saved address and payment
+                            details</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Access your complete order history</span></li>
+                    <li class="gl-vspace bullet_container___1Rxe1"><svg
+                            class="gl-icon icon___P8wgk gl-icon--size-communication" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M0 11c2.761.575 6.312 1.688 9 3.438 3.157-4.23 8.828-8.187 15-11.438-5.861 5.775-10.711 12.328-14 18.917-2.651-3.766-5.547-7.271-10-10.917z">
+
+                        </svg><span>Track your order delivery</span></li>
+                </ul>
+                <div class="gl-vspace-bpall-small"></div>
+            </div>
+            <div class="gl-vspace-bpall-small col-s-12"></div>
+            <div>Want to learn more about the Creators Club? </div><a class="gl-link"
+                href="https://www.adidas.com/us/creatorsclub" target="_blank">Read more about free
+                membership</a>
+            <div class="gl-vspace-bpall-small"></div>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="fname">First Name</label>
-        <input type="text" class="form-control" asp-for="FirstName" placeholder="Enter First Name">
-        <span asp-validation-for="FirstName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label for="lname">Last Name</label>
-        <input type="text" class="form-control" asp-for="LastName" placeholder="Enter Last Name">
-        <span asp-validation-for="LastName" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label for="phone">Phone</label>
-        <input type="text" class="form-control" asp-for="Phone" placeholder="Enter Phone" onblur="myFun(this)">
-        <span id="catching" asp-validation-for="Phone" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" class="form-control" asp-for="Address" placeholder="Enter Address">
-        <span asp-validation-for="Address" class="text-danger"></span>
-    </div>
-
-    <!-- <div class="form-group form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div> -->
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-<script>
-    function myFun(Phone) {
-        document.getElementById("catching").innerHTML = "khong dc de trong";
-    }
-</script>
+</div>
+    </form>

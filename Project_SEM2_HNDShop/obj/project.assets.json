@@ -8050,11 +8050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Project-SEM2\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
+      "projectUniqueName": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
       "projectName": "Project_SEM2_HNDShop",
-      "projectPath": "G:\\Project-SEM2\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
+      "projectPath": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "G:\\Project-SEM2\\Project_SEM2_HNDShop\\obj\\",
+      "outputPath": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

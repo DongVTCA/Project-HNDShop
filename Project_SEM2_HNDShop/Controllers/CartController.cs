@@ -24,9 +24,18 @@ namespace Project_SEM2_HNDShop.Controllers
             _context = context;
             _repository = new Repository(_context);
         }
+        public void GetListNav()
+        {
+            ViewBag.sessionName = HttpContext.Session.GetString("userName");
+            ViewData["subbrand"] = _context.SubBrands.ToList();
+            ViewData["category"] = _context.Categories.ToList();
+            ViewData["promotion"] = _context.Promotions.ToList();
+        }
+
 
         public IActionResult Index()
         {
+            GetListNav();
             if (HttpContext.Session.GetInt32("userId") == null)
             {
                 ViewBag.message = "You must login to view cart";
@@ -41,9 +50,9 @@ namespace Project_SEM2_HNDShop.Controllers
         }
 
 
-        public IActionResult AddToCart(int id, int quantity)
+        public async Task<IActionResult> AddToCart(int id, int quantity)
         {
-
+            GetListNav();
             if (HttpContext.Session.GetInt32("userId") == null)
             {
                 return RedirectToAction("Login", "Home");
@@ -59,7 +68,8 @@ namespace Project_SEM2_HNDShop.Controllers
                 {
                     cartItem.Quantity += cart.Quantity;
                     _context.Carts.Update(cartItem);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
+                    HttpContext.Session.SetInt32("cartId", cart.ProductId);
                     return RedirectToAction("Index", "Home");
                 }
                 _context.Add(cart);
@@ -69,6 +79,7 @@ namespace Project_SEM2_HNDShop.Controllers
         }
         public IActionResult UpdateCountCart(int id, int quantity)
         {
+            GetListNav();
             var userId = HttpContext.Session.GetInt32("userId");
             if (userId == null)
             {
@@ -80,12 +91,13 @@ namespace Project_SEM2_HNDShop.Controllers
                 cartItem.Quantity = quantity;
                 _context.Update(cartItem);
                 _context.SaveChanges();
-                return View(nameof(Index));
+                return RedirectToAction("Index", "Cart");
             }
         }
 
         public IActionResult DeleteCartItem(int id)
         {
+            GetListNav();
             var userId = HttpContext.Session.GetInt32("userId");
             if (userId == null)
             {
@@ -98,7 +110,7 @@ namespace Project_SEM2_HNDShop.Controllers
                 {
                     _context.Carts.Remove(cartItem);
                     _context.SaveChanges();
-                    return View(nameof(Index));
+                    return RedirectToAction("Index", "Cart");
                 }
                 else
                 {

@@ -14354,11 +14354,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Home\\Product.cshtml",
-      "TargetPath": "Views\\Home\\Product.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -14381,6 +14376,11 @@
     {
       "FilePath": "Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Home\\RemoveSessionCart.cshtml",
+      "TargetPath": "Views\\Home\\RemoveSessionCart.cshtml",
       "FileKind": "mvc"
     },
     {

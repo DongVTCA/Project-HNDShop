@@ -21,8 +21,17 @@ namespace Project_SEM2_HNDShop.Controllers
             _context = context;
             _repository = new Repository(_context);
         }
+        public void GetListNav()
+        {
+            ViewBag.sessionName = HttpContext.Session.GetString("userName");
+            ViewData["subbrand"] = _context.SubBrands.ToList();
+            ViewData["category"] = _context.Categories.ToList();
+            ViewData["promotion"] = _context.Promotions.ToList();
+        }
+
         public IActionResult Index()
         {
+            GetListNav();
             return View();
         }
 
@@ -52,6 +61,7 @@ namespace Project_SEM2_HNDShop.Controllers
         [HttpPost]
         public async Task<IActionResult> Buy([Bind("cusName,cusPhone,cusAddress")] UserInfoOrderDto infouser)
         {
+            GetListNav();
             var userIdsession = HttpContext.Session.GetInt32("userId");
             var cart = _context.Carts.ToList().Where(c => c.UserId == userIdsession);
             var user = await _context.Users.FindAsync(userIdsession);
