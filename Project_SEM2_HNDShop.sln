@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_SEM2_HNDShop", "Project_SEM2_HNDShop\Project_SEM2_HNDShop.csproj", "{1C34655D-2BC5-4959-B657-B49AD138835F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C34655D-2BC5-4959-B657-B49AD138835F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C34655D-2BC5-4959-B657-B49AD138835F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C34655D-2BC5-4959-B657-B49AD138835F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C34655D-2BC5-4959-B657-B49AD138835F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61AE1B3E-8E23-44E1-84D8-9200DDF1C624}
+	EndGlobalSection
+EndGlobal

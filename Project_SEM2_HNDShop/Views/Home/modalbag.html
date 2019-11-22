@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+<style>
+    .gl-no-margin-bottom {
+        margin-bottom: 0 !important;
+    }
+
+    .gl-body--s {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 14px;
+    }
+
+    .summary___2PcSy {
+        border-left: 1px solid #767677;
+    }
+
+    .price-row___3Kw5S {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .gl-price {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .summary-divider___v5ZMF {
+        margin-bottom: 15px;
+    }
+
+    .clear-vspacing___2TND_ {
+        margin-bottom: 0;
+    }
+
+    .gl-divider {
+        border: 0;
+        border-bottom: 1px solid #767677;
+    }
+
+    .price-rows___1DUOj {
+        margin-bottom: 15px;
+    }
+
+    .product-image___xUBxL {
+        /* width: 177px;
+        height: 177px; */
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Open modal for
+        @mdo</button>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SUCCESFULLY ADD TO CART!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <img class="product-image___xUBxL" src="https://assets.adidas.com/images/w_280,h_280,f_auto,q_auto:sensitive/4a6d0ffb60c64c63add8aa8b00b98598_9366/EH0779_650_01_standard.jpg"
+                                        alt="">
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <h5>Name Shoes</h5>
+                                    <p><span>130$</span></p>
+                                    <p>
+                                        <span></span>
+                                        <br>
+                                        <span></span>
+                                        <br>
+                                        <span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 summary___2PcSy">
+                            <h5>Your Cart</h5>
+                            <div class="gl-body--s gl-no-margin-bottom">2 items</div>
+                            <div class="price-row___3Kw5S">
+                                <div data-auto-id="add-to-bag-order-summary-product-total-cost">Total Product Cost:
+                                </div>
+                                <div class="gl-price" data-auto-id="add-to-bag-order-summary-product-total-cost-value">
+                                    <span class="gl-price__value">$260.00</span></div>
+                            </div>
+                            <div class="price-row___3Kw5S">
+                                <div data-auto-id="add-to-bag-order-summary-shipping-cost">Total Delivery Cost:</div>
+                                <div class="gl-price" data-auto-id="add-to-bag-order-summary-shipping-cost-value"><span
+                                        class="gl-price__value">FREE</span></div>
+                            </div>
+                            <div class="gl-divider clear-vspacing___2TND_ summary-divider___v5ZMF"></div>
+                            <div class="price-rows___1DUOj">
+                                <div class="price-row___3Kw5S">
+                                    <div data-auto-id="add-to-bag-total"><strong>Total:</strong></div><strong>
+                                        <div class="gl-price" data-auto-id="add-to-bag-total-value"><span
+                                                class="gl-price__value">$260.00</span></div>
+                                    </strong>
+                                </div>
+                                <div class="price-tax"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

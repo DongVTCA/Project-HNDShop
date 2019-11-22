@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Project_SEM2_HNDShop.DTO.ProductDto>
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="gl-product-card__media">
+                        <a href="/us/top-ten-hi-star-wars-obi-wan-kenobi-shoes/FV8031.html"
+                           data-auto-id="glass-hockeycard-link">
+                            <img data-auto-id="image"
+                                 class="gl-product-card__image performance-item"
+                                 src="https://assets.adidas.com/images/w_385,h_385,f_auto,q_auto:sensitive,fl_lossy/d4a6fabc1af54c4a8ec0aaee0124eb3b_9366/top-ten-hi-star-wars-obi-wan-kenobi-shoes.jpg"
+                                 alt="Top Ten Hi Star Wars Obi-Wan Kenobi Shoes"
+                                 title="Top Ten Hi Star Wars Obi-Wan Kenobi Shoes">
+                        </a>
+
+                        <div class="gl-badge gl-badge--small gl-badge--semi-urgent">New</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="gl-product-card__details">
+                            <a href="/us/top-ten-hi-star-wars-obi-wan-kenobi-shoes/FV8031.html">
+                                <div class="gl-product-card__details-top">
+                                    <div class="gl-product-card__category">
+                                        <p class="card-text">@item.subBrand.SubBrandName</p>
+                                    </div>
+                                    <div class="gl-product-card__details-icons"></div>
+                                </div>
+                                <div class="gl-product-card__details-main">
+                                    <div class="gl-product-card__name gl-label gl-label--m">
+                                        <h5 class="card-title">@item.product.ProName</h5>
+                                    </div>
+
+                                    <div class="gl-price gl-price--s gl-price__inline___-VD1g">
+                                        <span class="gl-price__value">@item.product.SellPrice</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+</div>
