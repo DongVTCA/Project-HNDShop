@@ -1,0 +1,106 @@
+﻿@model Project_SEM2_HNDShop.DTO.ProductUploadDto
+<div class="container">
+    <form method="post" asp-action="ProductAdmin" asp-controller="Admin" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="ProCode">Product Code</label>
+                    <input type="text" asp-for="ProCode" class="form-control" placeholder="Enter Product Code">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="ProCode">Product Name</label>
+                    <input type="text" asp-for="ProName" class="form-control" placeholder="Enter Product Name">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="selectSubBrand">SubBrand</label>
+                    <select class="form-control" asp-for="SubBrandId" id="selectSubBrand">
+                        @foreach (var item in ViewData["subbrand"] as List<SubBrand>)
+                        {
+                            <option value="@item.Id">@item.SubBrandName</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="selectCategory">Category</label>
+                    <select class="form-control" asp-for="CateId" id="selectCategory">
+                        @foreach (var item in ViewData["category"] as List<Category>)
+                        {
+                            <option value="@item.Id">@item.CateType</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="selectPromotion">Promotion</label>
+                    <select class="form-control" asp-for="PromoId" id="selectPromotion">
+                        @foreach (var item in ViewData["promotion"] as List<Promotion>)
+                        {
+                            <option value="@item.Id">@item.PromoTitle</option>
+                        }
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ProQuantity">Product Quantity</label>
+                    <input type="text" asp-for="Quantity" class="form-control" placeholder="Enter Product Quantity">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ProSize">Product Size</label>
+                    <input type="text" asp-for="Size" class="form-control" placeholder="Enter Product Size">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ProColor">Product Color</label>
+                    <input type="text" asp-for="Color" class="form-control" placeholder="Enter Product Color">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="ProOriginPrice">Product OriginPrice</label>
+                    <input type="text" asp-for="OriginPrice" class="form-control" placeholder="Enter Product OriginPrice">
+                    <small class="form-text text-muted">error</small>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Product Description</label>
+                    <textarea class="form-control" asp-for="ProDesc" id="exampleFormControlTextarea1" rows="2"></textarea>
+                </div>
+            </div>
+            @*<div>
+                    <div class="form-group">
+                        <label for="selectSattus">Sattus Product</label>
+                        <select class="form-control" asp-for="product.StatusCode" id="selectSattus">
+                                <option value="0">Còn hàng</option>
+                                <option value="1">Hết hàng</option>
+                                <option value="2">Ngừng kinh doanh</option>
+                        </select>
+                    </div>
+                </div>*@
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Product Image</label>
+                    <input type="file" asp-for="MyImage" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+            </div>
+            <button class="btn-outline-primary">Add</button>
+        </div>
+    </form>
+</div>

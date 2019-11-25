@@ -82,10 +82,6 @@ namespace Project_SEM2_HNDShop.Controllers
                 if (product != null && product.StatusCode != 0 && product.Quantity >= item.Quantity)
                 {
                     orderdetail = InputOrderDetail(lastorder.Id, item.ProductId, item.Quantity, product.SellPrice, promotion.DiscountPercent);
-                    //orderdetail.Price = (product.SellPrice / 100) * (100 - promotion.DiscountPercent);
-                    //orderdetail.Quantity = item.Quantity;
-                    //orderdetail.ProductId = item.ProductId;
-                    //orderdetail.OrderId = lastorder.Id;
                     product.Quantity -= item.Quantity;
                     _context.Add(orderdetail);
                     await _context.SaveChangesAsync();
@@ -98,4 +94,5 @@ namespace Project_SEM2_HNDShop.Controllers
             return RedirectToAction("Index", "Home");
         }
     }
+
 }

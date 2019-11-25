@@ -34,7 +34,9 @@ namespace Project_SEM2_HNDShop.Controllers
             ViewBag.sessionCart = HttpContext.Session.GetInt32("cartId");
             if (HttpContext.Session.GetString("userName") != null && HttpContext.Session.GetInt32("userId") != null)
             {
+                var useridsession = HttpContext.Session.GetInt32("userId");
                 ViewBag.sessionName = HttpContext.Session.GetString("userName");
+                ViewBag.Itemcart = _repository.GetListItemCartByUserIdOrderByDesc((int)useridsession);
             }
             else
             {

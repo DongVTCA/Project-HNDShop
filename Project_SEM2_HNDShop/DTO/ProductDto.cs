@@ -17,5 +17,7 @@ namespace Project_SEM2_HNDShop.DTO
         public Brand brand { get; set; }
         public Category category { get; set; }
         public Promotion promotion { get; set; }
+
+        public CartViewDto cartviewdto { get; set; }
     }
 }

@@ -13,5 +13,8 @@ namespace Project_SEM2_HNDShop.DTO
         public int DiscountPercent { get; set; }
         public int Quantity { get; set; }
 
+        public int? countItemCart { get; set; }
+        public double? totalPrice { get; set; }
+
     }
 }
