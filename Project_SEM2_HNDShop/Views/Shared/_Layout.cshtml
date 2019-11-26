@@ -17,6 +17,8 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="~/css/adidas.css" />
+    <!-- <link rel="stylesheet" href="https://www.adidas.com/glass/react/b4604aa/glass-adidas.css"> -->
 </head>
 <body>
 
@@ -84,7 +86,7 @@
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             <a class="dropdown-item" href="#">Profile</a>
-                                            <a class="dropdown-item" href="#">Change Password</a>
+                                            <a class="dropdown-item" asp-controller="Home" asp-action="ChangePassword" >Change Password</a>
                                             <a class="dropdown-item" asp-controller="Home" asp-action="Logout">Logout</a>
                                         </div>
                                     }
@@ -113,71 +115,158 @@
     </div>
 
     <!-- footer -->
-    <footer>
-        <div class="">
-            <div class="row ">
-                <div class="top10">
-                    <h4>Trending</h4>
-                    <a href="">Black Friday</a><br>
-                    <a href="">Cyber Monday</a><br>
-                    <a href="">Casual Shoes</a><br>
-                    <a href="">Slip On Shoes</a><br>
-                    <a href="">Camo Clothings</a><br>
-                    <a href="">Burgundy Shoes</a><br>
-                    <a href="">Leather Sneakers</a><br>
-
+    <footer class="footer___1NWUu" data-auto-id="glass-footer">
+    <div class="footer_newsletter___1dppK">
+        <div class="container wrapper___21VN- row">
+            <div class="col-l-12 col-s-12">
+                <h4>Join Creators club &amp; get 15% discount</h4>
+            </div>
+            <div class="col-l-12 col-s-12"><button type="button" class="gl-cta gl-cta--primary"
+                    aria-label="Primary"><span class="gl-cta__text">Sign up</span>
+                    <svg class="gl-icon gl-cta__icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
+                        height="20" viewBox="0 0 172 172">
+                        <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g>
+                                <path fill="#ffffff" id="arrow"
+                                    d="M127.48156,44.65281c-2.795,-0.1075 -5.38844,1.49156 -6.53063,4.04469c-1.15562,2.55313 -0.65844,5.53625 1.27656,7.57875l21.13719,22.84375h-133.04469c-2.48594,-0.04031 -4.78375,1.26313 -6.03344,3.41313c-1.26313,2.13656 -1.26313,4.79719 0,6.93375c1.24969,2.15 3.5475,3.45344 6.03344,3.41312h133.04469l-21.13719,22.84375c-1.72,1.80063 -2.32469,4.38063 -1.59906,6.75906c0.72563,2.37844 2.67406,4.17906 5.09281,4.71656c2.43219,0.5375 4.95844,-0.28219 6.61125,-2.12313l36.13344,-39.07625l-36.13344,-39.07625c-1.23625,-1.37062 -2.99656,-2.20375 -4.85094,-2.27094z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    </button></div>
+        </div>
+    </div>
+    <div class="footer_bottom___2ATVd">
+        <div class="row">
+            <div class="col-l-24 col-s-12 no-gutters" data-component="content/ExternalLinks" data-linkscontext="footer">
+                <div class="footer_content___fikLK">
+                    <div>
+                        <div class="contentasset" data-contentasset-id="footer-eCom" data-contentasset="footer-eCom">
+                            <div class="content-wrapper">
+                                <div>
+                                    <ul>
+                                        <li>
+                                            <h5>TRENDING</h5>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><a href="">Black Friday</a></li>
+                                        <li><a href="">Cyber Monday</a></li>
+                                        <li><a href="">Casual Shoes</a></li>
+                                        <li><a href="">Slip On Shoes</a></li>
+                                        <li><a href="">Camo Clothing</a></li>
+                                        <li><a href="">Burgundy Shoes</a>
+                                        </li>
+                                        <li><a href="">Leather Sneakers</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <h5><a href="">CUSTOMER SUPPORT</a></h5>
+                                        <li><a href="">Get Help</a></li>
+                                        <li><a href="">Track Order</a>
+                                        </li>
+                                        <li><a href="">Returns
+                                                &amp; Refunds</a></li>
+                                        <li><a href="">Sizing</a></li>
+                                        <li><a href="">Promotions</a>
+                                        </li>
+                                        <li><a href="">How to Clean</a>
+                                        </li>
+                                        <li><a href="">Store
+                                                Locator</a></li>
+                                        <li><a href="">Site Map</a></li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <h5><a href="">COMPANY INFO</a>
+                                            </h5>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><a href="">About
+                                                Us</a></li>
+                                        <li><a href="">Careers</a></li>
+                                        <li><a href="">Press</a>
+                                        </li>
+                                        <li><a href="">Affiliates</a></li>
+                                        <li><a href="">Military
+                                                Discount</a></li>
+                                        <li><a href="">Student
+                                                Discount</a></li>
+                                        <li><a href="">Mobile Apps</a></li>
+                                        <li><a href="">Creators Club</a>
+                                        </li>
+                                        <li><a href="">adidas Stories</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <h5>PARTNER SITES</h5>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><a href="">adidas
+                                                Outdoor</a></li>
+                                        <li><a href="">miTeam</a>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li>
+                                            <h5>PRIVACY &amp; TERMS</h5>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><a href="">Privacy
+                                                &amp; Security</a></li>
+                                        <li><a href="">adidas
+                                                - Runtastic Privacy Statement</a></li>
+                                        <li><a href="">Terms
+                                                and Conditions</a></li>
+                                        <li><a href="">Policy
+                                                on Human Trafficking</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <h5><a href="">GIFT CARDS</a></h5>
+                                        </li>
+                                        <li>&nbsp;</li>
+                                        <li><a href="">Check Balance</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="top10">
-                    <h4>Customer Supports</h4>
-                    <a href="">Get Helps</a><br>
-                    <a href="">Track Order</a><br>
-                    <a href="">Return and Refund </a><br>
-                    <a href="">Sizing</a><br>
-                    <a href="">Promotions</a><br>
-                    <a href="">How To Clean</a><br>
-                    <a href=""> Store Locator</a><br>
-                    <a href="">Site Map</a><br>
-
-                </div>
-                <div class="top10">
-                    <h4>Company Info</h4>
-                    <a href="">About Us</a><br>
-                    <a href="">Careers</a><br>
-                    <a href="">Press</a><br>
-                    <a href="">Affiliates</a><br>
-                    <a href="">Military Discount</a><br>
-                    <a href="">Students Discount</a><br>
-                    <a href="">Mobile App</a><br>
-                    <a href="">Creator Club</a><br>
-
-
-                </div>
-
-                <div class="top10">
-                    <h4>Contact With Us</h4>
-                    <div class="row container">
-                        <a class="icon" href="https://www.facebook.com/adidasoriginals/">
-                            <div class="icons8-facebook-old"></div>
-                        </a>
-                        <a class="icon" href="https.facebook.com">
-                            <div id="icon" class="icons8-instagram"></div>
-                        </a>
-                        <a class="icon" href="https.facebook.com">
-                            <div id="icon" class="icons8-twitter"></div>
-                        </a>
+                <div class="footer_copy___1Wj9l">
+                    <div class="footer_copy_inner___g38B-">
+                        <div class="footer_links___aCcL_">
+                            <div id="__glass-footer__dw_footer_content" class="inline_link_list___3YamB">
+                                <div class="contentasset"></div>
+                                <ol class="copy">
+                                    <li>
+                                        <div id="teconsent" style="display: none;"></div><span
+                                            style="padding-right: 21px;">|</span>
+                                    </li>
+                                    <li><a href="" rel="nofollow">Privacy
+                                            Policy</a></li>
+                                    <li><span style="padding-right: 21px;">|</span></li>
+                                    <li><a href="" rel="nofollow">Terms
+                                            and Conditions</a></li>
+                                    <li><span style="padding-right: 21px;">|</span></li>
+                                    <li>
+                                        <p>© 2019 adidas America Inc.</p>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-
-        <div class="efooter">
-            <div class="cop">
-                &copy; CoppyRight adidas America Inc
-            </div>
-        </div>
-
-    </footer>
+    </div>
+</footer>
 
     <!-- <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

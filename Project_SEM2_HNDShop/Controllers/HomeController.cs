@@ -153,10 +153,10 @@ namespace Project_SEM2_HNDShop.Controllers
             return View();
         }
 
-        public IActionResult ChangePassword()
-        {
-            return View();
-        }
+        // public IActionResult ChangePassword()
+        // {
+        //     return View();
+        // }
 
         public async Task<ActionResult> ChangePassword(string oldpassword, string password, string repassword)
         {

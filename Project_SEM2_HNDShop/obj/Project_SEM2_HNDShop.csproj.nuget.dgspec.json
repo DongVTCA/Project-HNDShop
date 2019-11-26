@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj": {}
+    "D:\\26-11-2019\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj": {}
   },
   "projects": {
-    "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj": {
+    "D:\\26-11-2019\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
+        "projectUniqueName": "D:\\26-11-2019\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
         "projectName": "Project_SEM2_HNDShop",
-        "projectPath": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "G:\\Project-HNDShop\\Project_SEM2_HNDShop\\obj\\",
+        "projectPath": "D:\\26-11-2019\\Project-HNDShop\\Project_SEM2_HNDShop\\Project_SEM2_HNDShop.csproj",
+        "packagesPath": "C:\\Users\\KyThuat88\\.nuget\\packages\\",
+        "outputPath": "D:\\26-11-2019\\Project-HNDShop\\Project_SEM2_HNDShop\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\KyThuat88\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

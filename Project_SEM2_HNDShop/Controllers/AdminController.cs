@@ -15,9 +15,10 @@ namespace Project_SEM2_HNDShop.Controllers
     public class AdminController : Controller
     {
         private readonly ApplicationContext _context;
+        [Obsolete]
         private readonly IHostingEnvironment _hostingEnvironment;
 
-
+        [Obsolete]
         public AdminController(ApplicationContext context, IHostingEnvironment hostingEnvironment)
         {
             _context = context;
@@ -29,6 +30,7 @@ namespace Project_SEM2_HNDShop.Controllers
             return View(new ProductUploadDto());
         }
         [HttpPost]
+        [Obsolete]
         public async Task<IActionResult> ProductAdmin([Bind("ProCode,ProName,SubBrandId,CateId,PromoId,Quantity,Size,Color,OriginPrice,ProDesc,MyImage")] ProductUploadDto productUploadDto)
         {
             var filename = productUploadDto.MyImage.FileName;
